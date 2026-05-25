@@ -1,71 +1,229 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>אפליקציות וי･י(web) – ירון זלוט</title>
-  <meta name="description" content="אוסף אפליקציות ופרויקטים ב־web: ליגת הלאליגה, עולמית, חישובי עישון(DISABLED), ווועדי בית, Calorie וכו’">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>אפליקציות ופרויקטים | yaronzlot</title>
+  <meta name="description" content="אוסף אפליקציות ופרויקטים של ירון זלוט." />
   <style>
+    :root {
+      --bg1: #0f172a;
+      --bg2: #1e293b;
+      --card: rgba(255,255,255,0.92);
+      --text: #0f172a;
+      --muted: #64748b;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --border: rgba(148,163,184,0.22);
+      --shadow: 0 10px 30px rgba(2, 6, 23, 0.18);
+    }
+
+    * { box-sizing: border-box; }
+
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 20px;
-      line-height: 1.6;
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      color: white;
+      min-height: 100vh;
     }
-    h1 { text-align: center; }
-    .app {
-      margin: 20px 0;
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 28px 18px 40px;
     }
-    .btn {
+
+    .hero {
+      text-align: center;
+      padding: 28px 16px 20px;
+    }
+
+    .badge {
       display: inline-block;
-      padding: 10px 18px;
-      margin-top: 10px;
-      background: #0366d6;
+      background: rgba(255,255,255,0.12);
+      color: #e2e8f0;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin-bottom: 14px;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      margin: 12px auto 0;
+      max-width: 620px;
+      color: #cbd5e1;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .card {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+      font-size: 24px;
+      flex: 0 0 auto;
+    }
+
+    .text {
+      min-width: 0;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 4px;
+      color: #0f172a;
+    }
+
+    .desc {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      background: var(--primary);
       color: white;
       text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: 0.2s ease;
+      box-shadow: 0 8px 18px rgba(37,99,235,0.25);
     }
+
     .btn:hover {
-      background: #024c9b;
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .footer {
+      text-align: center;
+      color: #94a3b8;
+      margin-top: 28px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 26px; }
+      .card {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn {
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>אפליקציות וי･י שלי</h1>
+  <div class="wrap">
+    <section class="hero">
+      <div class="badge">אפליקציות ופרויקטים שלי</div>
+      <h1>ירון זלוט</h1>
+      <p class="subtitle">
+        אוסף אפליקציות, מחשבונים ופרויקטים שיצרתי. לחץ כדי להיכנס לכל אחד מהם.
+      </p>
+    </section>
 
-  <div class="app">
-    <h2>ווועדי בית</h2>
-    <p>דף לעבודה עם וועדי בית / ניהול נוכחות.</p>
-    <a href="https://yaronzlot.github.io/vaadbayit/" class="btn">עבור ל־Vaad Bayit</a>
+    <section class="grid">
+      <div class="card">
+        <div class="left">
+          <div class="icon">🏠</div>
+          <div class="text">
+            <div class="title">Vaad Bayit</div>
+            <div class="desc">ניהול ועד בית ואפליקציה פנימית לדיירים.</div>
+          </div>
+        </div>
+        <a class="btn" href="https://yaronzlot.github.io/vaadbayit/" target="_blank">פתח</a>
+      </div>
+
+      <div class="card">
+        <div class="left">
+          <div class="icon">⚽</div>
+          <div class="text">
+            <div class="title">World Cup</div>
+            <div class="desc">פרויקט ספורט ותחזיות לטורנירים ומשחקים.</div>
+          </div>
+        </div>
+        <a class="btn" href="https://yaronzlot.github.io/worldcup/" target="_blank">פתח</a>
+      </div>
+
+      <div class="card">
+        <div class="left">
+          <div class="icon">🔥</div>
+          <div class="text">
+            <div class="title">Calorie</div>
+            <div class="desc">חישוב קלוריות ומעקב תזונתי בצורה פשוטה.</div>
+          </div>
+        </div>
+        <a class="btn" href="https://yaronzlot.github.io/Calorie/" target="_blank">פתח</a>
+      </div>
+
+      <div class="card">
+        <div class="left">
+          <div class="icon">🏆</div>
+          <div class="text">
+            <div class="title">Ligat Ha'al</div>
+            <div class="desc">אפליקציה/דף לספורט וליגת העל.</div>
+          </div>
+        </div>
+        <a class="btn" href="https://yaronzlot.github.io/ligathal/" target="_blank">פתח</a>
+      </div>
+
+      <div class="card">
+        <div class="left">
+          <div class="icon">♿</div>
+          <div class="text">
+            <div class="title">Disability Calculator</div>
+            <div class="desc">מחשבון לחישובים הקשורים לנכות וזכויות.</div>
+          </div>
+        </div>
+        <a class="btn" href="https://yaronzlot.github.io/DisabilityCalculator/" target="_blank">פתח</a>
+      </div>
+    </section>
+
+    <div class="footer">© ירון זלוט</div>
   </div>
-
-  <div class="app">
-    <h2>World Cup</h2>
-    <p>דף למשחקי עולמית / תחזיות וסטטיסטיקות.</p>
-    <a href="https://yaronzlot.github.io/worldcup/" class="btn">עבור ל־World Cup</a>
-  </div>
-
-  <div class="app">
-    <h2>Calorie</h2>
-    <p>דף לחישוב קלוריות/תזונה.</p>
-    <a href="https://yaronzlot.github.io/Calorie/" class="btn">עבור ל־Calorie App</a>
-  </div>
-
-  <div class="app">
-    <h2>Ligat Ha’al</h2>
-    <p>דף למשחקי ליגת העל / ספורט.</p>
-    <a href="https://yaronzlot.github.io/ligathal/" class="btn">עבור ל־Ligat Ha’al</a>
-  </div>
-
-  <div class="app">
-    <h2>Disability Calculator</h2>
-    <p>מחשבון פנסיות/נכים.</p>
-    <a href="https://yaronzlot.github.io/DisabilityCalculator/" class="btn">עבור ל־Disability Calculator</a>
-  </div>
-
 </body>
 </html>
